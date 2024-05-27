@@ -17,7 +17,23 @@
 		Haz que en ese div aparezca un h1 y un párrafo con un enlace, con los textos que quieras. -->
 	
 	<script>
-					
+                let divDestacado = document.querySelector('#destacado');
+
+                let h1 = document.createElement('h1');
+				h1.textContent='titulo';
+
+				let parrafo = document.createElement('p');
+				parrafo.textContent='poner enlace:';
+
+				let enlace = document.createElement('a');
+				enlace.textContent='enlace';
+				enlace.setAttribute('href', 'https://www.ejemplo.com')
+
+				divDestacado.appendChild(h1);
+				divDestacado.appendChild(parrafo);
+				divDestacado.appendChild(enlace);
+
+
 	</script>
 </body>
 </html>

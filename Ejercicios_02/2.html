@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+	
+	</style>
+</head>
+<body>
+    <!-- Vamos a complicarlo un poco más, metiendo dentro de ese contenido el valor de unas variables
+	HTML: -->
+		<div id="noticia"></div>
+	<!-- JS: 
+		var titulo = "Última hora: Javascript está mal";
+		var fecha = "2020-07-10";
+		var texto = "Investigadores de Harvard han llegado a la conclusión de que Javascript no me gusta nada, y que prefiero las croquetas de jamón.";
+		
+		Haz que en el div aparezca un h1, un span y un párrafo. En el h1 tienes que poner el valor de la variable titulo, en el span el de la variable fecha, y en el párrafo el de la variable texto. -->
+
+	
+	<script>
+			let noticiaDiv = document.querySelector('#noticia');
+            
+            var titulo = "Última hora: Javascript está mal";
+		    var fecha = "2020-07-10";
+		    var texto = "Investigadores de Harvard han llegado a la conclusión de que Javascript no me gusta nada, y que prefiero las croquetas de jamón.";
+
+            let h1 = document.createElement('h1');
+            let sp = document.createElement('span');
+            let parrafo = document.createElement('p');
+
+            noticiaDiv.appendChild(h1);
+            h1.textContent=`${titulo}`;
+            
+            noticiaDiv.appendChild(sp);
+            sp.textContent=`${fecha}`;
+
+            noticiaDiv.appendChild(parrafo);
+            parrafo.textContent=`${texto}`
+
+	</script>
+</body>
+</html>
