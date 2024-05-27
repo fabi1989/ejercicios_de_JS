@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+        .caja {width: 200px; height: 200px; border: 1px solid #333;}
+		.beige {background: beige;}
+	</style>
+</head>
+<body>
+    <!-- CSS:
+		.caja {width: 200px; height: 200px; border: 1px solid #333;}
+		.beige {background: beige;}
+	HTML: -->
+		<div class="caja_beige"></div>
+	<!-- JS: 
+		Código para QUITARLE la clase beige al div. -->
+	
+	<script>
+        //let caja =document.querySelector('.caja')
+        let cajab = document.querySelector('.caja_beige');
+        cajab.classList.add('caja');
+        cajab.classList.remove('beige');		
+	</script>
+</body>
+</html>
