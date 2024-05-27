@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+	
+	</style>
+</head>
+<body>
+    <!-- Supongamos que tenemos este select (en efecto, no tiene id ni class):
+    Te toca: escribe JS que establezca la opción del Marketing en ese select. Pista: propiedad selected, no value -->
+		<select>
+			<option value="1">Dirección</option>
+			<option value="2">Producción</option>
+			<option value="3">Marketing</option>
+			<option value="4">RRHH</option>
+		</select>
+	
+	
+	<script>
+				var select = document.querySelector('select');
+                var options = select.querySelectorAll('option');
+                options.forEach(function (option) {
+                    if(option.textContent === 'Marketing'){
+                        option.selected = true;
+                    }
+                });
+
+
+	</script>
+</body>
+</html>

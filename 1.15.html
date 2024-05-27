@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+	
+	</style>
+</head>
+<body>
+    <!-- HTML: -->
+		<textarea rows="3">Roma ni se conoce sin oro, ni se conoce sin amor</textarea>
+		<textarea rows="3">¡Sí, a por todas, arrasad otro país!</textarea>
+	<!-- JS: 
+		Código para mostrar en la consola el valor del SEGUNDO textarea (jejeje) -->
+	
+	<script>
+			let text = document.querySelectorAll('textarea')	
+			console.log(text.item(1).textContent)		
+	</script>
+</body>
+</html>
