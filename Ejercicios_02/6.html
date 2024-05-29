@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+	
+	</style>
+</head>
+<body>
+    <!-- HTML: -->
+    Importe base:<br>
+    <input id="base" type="number" value="238"><br>
+    Importe total: <span id="total"></span> €
+<!-- JS: 
+    Código para que en el span #total aparezca el importe del input con el IVA (21% a día de hoy) -->
+
+	
+	<script>
+        let base = document.querySelector('#base');
+        let total = document.querySelector('#total');
+
+        function calcularTotal(){
+            let valorBase = parseFloat(base.value);
+            let tasaIva = 0.21;
+            let totalConIva = valorBase*(1 + tasaIva);
+            total.textContent=totalConIva
+        }
+        calcularTotal();
+        base.addEventListener('input', calcularTotal)
+
+        
+	</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+        .rojo{
+            color: red;
+        }
+	</style>
+</head>
+<body>
+    <!-- HTML: -->
+    <div class="saludo">esperaba que vinierais </div>
+<!-- JS: 
+    Añade la palabra "No" al principio de la frase del div, y la palabra "sobrios" al final. Las dos palabras deben ir en ROJO. Piensa, piensa. -->
+
+	
+	<script>
+			const saludo = document.querySelector('.saludo');
+            
+            let No = document.createElement('span');
+            No.textContent=('No ');
+            No.classList.add('rojo')
+
+            let sobrios = document.createElement('span');
+            sobrios.textContent=('sobrios')
+            sobrios.classList.add('rojo')
+            
+
+            saludo.prepend(No);
+            saludo.append(sobrios);
+	</script>
+</body>
+</html>
