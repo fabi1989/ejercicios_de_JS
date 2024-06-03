@@ -1,0 +1,34 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+        
+        </style>
+    </head>
+    <body>
+        <!-- Este no es dificil, pero tendrás que pensar. O sea, que puede que sea difícil.
+        HTML: -->
+    <header id="cabecera"></header>
+    <!-- JS: 
+    Escribe código JS para que en el header ése aparezca un BOTÓN que al pulsarlo muestre un mensaje en un alert (el que quieras) -->
+        
+        <script>
+                 const laCabecera = document.querySelector('#cabecera');
+                 
+                 const boton=document.createElement('button');
+                 boton.textContent='clickaaa'
+
+                 laCabecera.appendChild(boton)
+
+                 boton.addEventListener('click', function(){
+                    alert('aloha')
+                 })
+
+                 
+        </script>
+    </body>
+    </html>
