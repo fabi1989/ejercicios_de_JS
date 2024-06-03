@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+	
+	</style>
+</head>
+<body>
+    <!-- HTML: -->
+		Importe base:<br>
+		<input id="base" type="number" value="238"><br>
+		Descuento (10%): <span id="descuento"></span> €
+		IVA (21%): <span id="iva"></span> €
+		Importe total: <span id="total"></span> €
+	<!-- JS: --> 
+		<!-- Complicamos un poco más el ejercicio anterior. -->
+
+	
+	<script>
+		const base = document.querySelector('#base');
+        const descuento = document.querySelector('#descuento');
+        const iva = document.querySelector('#iva');
+        const total = document.querySelector('#total');
+        
+        function calcularTotal (){
+            let valorBase = parseFloat(base.value);
+            let descuentoDelDiez = 0.10;
+            let ivaNormal = 0.21;
+
+            //descuento del 10%
+            let baseDescuento = valorBase * descuentoDelDiez;
+            descuento.textContent=baseDescuento;
+
+            //iva del 21%
+            let totalConIva = valorBase*ivaNormal;
+            iva.textContent=totalConIva; 
+            
+            //total
+            let totalFinal=baseDescuento+totalConIva;
+            total.textContent=valorBase-baseDescuento+totalConIva
+
+        }
+
+        calcularTotal()
+        base.addEventListener('input',calcularTotal);
+
+	</script>
+</body>
+</html>

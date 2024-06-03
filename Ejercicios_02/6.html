@@ -25,7 +25,7 @@
         function calcularTotal(){
             let valorBase = parseFloat(base.value);
             let tasaIva = 0.21;
-            let totalConIva = valorBase*(1 + tasaIva);
+            let totalConIva = valorBase* tasaIva + valorBase;
             total.textContent=totalConIva
         }
         calcularTotal();
