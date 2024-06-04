@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+	body {
+        height: 100vh; 
+        margin: 0; 
+        padding-left: 275px;}
+    .caja {
+        display: inline-block; 
+        width: 250px; 
+        min-height: 50px; 
+        border: 1px solid #666;}
+    .tablon {
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        width: 250px; 
+        height: 100%; 
+        background: #CCC;}
+	</style>
+</head>
+<body>
+<!-- HTML: -->
+    <aside class="tablon"></aside>
+    <button onclick="unoMas()">Añadir uno más</button>
+<!-- JS: 
+    Código para que cada vez que se pulse el botón se añada en el aside.tablon un div con la clase caja, y un texto, el que quieras.
+    ¿Podrías hacer que en lugar de un texto fijo apareciera la fecha actual? -->
+    
+	
+	<script>
+			const elTablon = document.querySelector('.tablon');
+            
+            function unoMas (){
+                //obtener fecha actual
+                const fechaActual = new Date();
+                const nuevaCaja = document.createElement('div');
+                nuevaCaja.classList.add('caja');
+                // Establecer el contenido del div con la fecha actual
+                nuevaCaja.textContent = fechaActual.toLocaleString(); // puedes cambiar .toLocaleString() según el formato de fecha que necesites
+                
+                // Añadir el nuevo div al aside.tablon
+                elTablon.appendChild(nuevaCaja);
+            }
+	</script>
+</body>
+</html>

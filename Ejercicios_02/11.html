@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+	
+	</style>
+</head>
+<body>
+    <!-- HTML: -->
+    <header id="cabecera">
+        <div id="aviso">
+            <a href="ofertas">Descubre nuestras ofertas</a><br>
+            <button onclick="verMas()">Descartar</button>
+        </div>
+    </header>
+<!-- JS: 
+    Escribe la función verMas. Al llamarla clicando el botón, borrará todo lo que hay en la cabecera. Es muy fácil, tranquilo. -->
+    
+	
+	<script>
+        const laCabecera = document.querySelector('#cabecera');
+
+			function verMas (){
+                laCabecera.remove()
+            }		
+	</script>
+</body>
+</html>
