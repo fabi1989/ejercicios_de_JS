@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+	body {
+        height: 100vh; 
+        margin: 0; 
+        padding-left: 275px;}
+    .caja {
+        display: inline-block; 
+        width: 250px; 
+        min-height: 50px; 
+        border: 1px solid #666;}
+    .tablon {
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        width: 250px; 
+        height: 100%; 
+        background: #CCC;}
+
+	</style>
+</head>
+<body> 
+    <!-- HTML: -->
+    <aside class="tablon"></aside>
+    <input type="text" id="mensaje">
+    <button onclick="unoMas()">Añadir uno más</button>
+    <button onclick="borrar()">Vaciar</button>
+<!-- JS: 
+    Esta es una variación del ejercicio anterior. Al pulsar el botón añadirás al tablón un div con la clase caja, como antes, pero en esta ocasión el texto será el que hayas escrito dentro del input#mensaje -->
+	
+	<script>
+        const elTablon = document.querySelector('.tablon');
+        const elInput = document.querySelector('#mensaje');
+
+        function unoMas (){
+            
+            let elDiv = document.createElement('div');
+            elDiv.classList.add('caja');
+
+            let valor = elInput.value;
+            
+            elDiv.textContent=elInput.value;
+            elTablon.appendChild(elDiv);
+
+            elInput.value='';
+        }
+
+        function borrar (){
+            elTablon.innerHTML='';
+        }
+					
+	</script>
+</body>
+</html>
