@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		#agenda {
+            display: flex;
+            background-color: wheat;
+        }
+		.caja {
+            border: 1px solid #CCC; 
+            padding: 10px;
+        }
+	</style>
+</head>
+<body>
+
+    <nav id="agenda"></nav>
+
+    <!-- Haz que dentro del nav#agenda salga un div.caja con cada día de la semana. 
+		No seas bestia: usa un bucle. -->
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script>
+            const agenda = document.querySelector('#agenda');
+
+			let diaSemana = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado','domingo']	
+            
+            diaSemana.forEach(dia =>{
+                let caja = document.createElement('div');
+                caja.classList.add('caja')
+                caja.textContent=dia;
+                agenda.appendChild(caja);
+            })
+
+            
+	</script>
+</body>
+</html>
