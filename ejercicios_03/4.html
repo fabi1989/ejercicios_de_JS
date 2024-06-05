@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		#noticion {
+            border: 1px solid #CCC; 
+            padding: 15px;
+        }
+	</style>
+</head>
+<body>
+    <div id="noticion"></div>
+    
+    <!-- Tienes que mostrar en #noticion los valores de las propiedades del objeto noticia que has creado. Es decir, que tendrás que generar HTML desde JS... -->
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script>
+        const noticion = document.querySelector('#noticion');
+        //objeto
+        let noticia = {
+            titulo: "Ultima Hora",
+            fecha: "05/06/2024",
+            entradilla: "prueba",
+            foto:"imagenes/img1.jpg",
+            visitas: "200",
+            texto: "parrafo cualquiera"
+            } 
+            //console.log(noticia)
+
+            noticion.innerHTML=`
+            <div>
+                <h1>Título: ${noticia.titulo}</h1>
+                <p>Fecha:${noticia.fecha}</p>
+                <p>${noticia.texto}</p>
+                <span>Visitas: ${noticia.visitas}</span><hr>
+                <img src="${noticia.foto}" alt="Imagen noticia">
+            </div>
+            `
+
+	</script>
+</body>
+</html>

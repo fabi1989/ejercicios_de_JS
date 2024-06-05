@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+	
+	</style>
+</head>
+<body>
+	    <input type="text" id="texto">
+		<button type="button" onclick="unoMas()">Añadir saludo</button>
+    
+        <!-- Debes crear la función unoMas, en la que 
+		- añadiremos al final del array saludos el contenido del <input>.
+		- mostraremos el array en la consola
+		- y vaciaremos el <input> --> 
+
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script>
+		var saludos = [];
+		var texto = document.querySelector("#texto");	
+        
+        function unoMas () {
+            saludos.push(texto.value)
+            console.log(saludos)
+            texto.value='';
+
+        }
+	</script>
+</body>
+</html>
