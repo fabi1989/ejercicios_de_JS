@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+	.contenedor {
+        display: flex; 
+        flex-wrap: wrap; 
+        width: 60%; 
+        margin: 20px auto;
+    }
+		.saludin {
+            border: 1px solid #CCC; 
+            color: #999; 
+            padding: 10px; 
+            max-width: 120px;
+        }
+	</style>
+</head>
+<body>
+	    <input type="text" id="texto">
+		<button type="button" onclick="unoMas()">Añadir saludo</button>
+		<div class="contenedor"></div>
+
+        <!-- Modifica la función unoMas para que en vez de mostrar el array en la consola, aparezcan sus items dentro de divs.saludin en el div.contenedor.
+		Tienes dos formas de hacer esto: 
+			- o bien vas añadiendo cada nuevo item del array al innerHTML del contenedor,
+			- o bien cada vez que crees un nuevo item borras todo el innerHTML del contenedor y lo reconstruyes mediante un bucle.
+		Tú decides. -->
+
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script>
+        var contenedor = document.querySelector(".contenedor");
+		var saludos = [];
+		var texto = document.querySelector("#texto");	
+		
+        //primera opcion
+        function unoMas () {
+            saludos.push(texto.value)
+            //console.log(saludos)
+            texto.value='';
+
+			let saludini = document.createElement('div');
+			saludini.classList.add('saludin');
+			contenedor.appendChild(saludini);
+			saludini.innerHTML=saludos
+        } 
+
+	</script>
+</body>
+</html>
